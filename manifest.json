@@ -1,0 +1,19 @@
+{
+  "name": "ERP CV Auto Preview",
+  "description": "Enhances your CV making experience with IIT KGP ERP by providing real-time updates to any changes made.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "ERP CV Auto Preview",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://erp.iitkgp.ac.in/*"
+  ]
+}
