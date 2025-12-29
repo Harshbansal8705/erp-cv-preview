@@ -1,29 +1,69 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 10px;
+      width: 180px;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    h4 {
+      margin: 6px 0 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
     }
 
     button {
-      margin: 5px;
-      padding: 5px 10px;
+      padding: 8px 10px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    button:hover {
+      background: #eef2ff;
+      border-color: #6366f1;
+    }
+
+    button:active {
+      background: #e0e7ff;
+    }
+
+    #not_url_display {
+      font-size: 11px;
+      text-align: center;
+      color: #6b7280;
+      line-height: 1.4;
     }
   </style>
 </head>
 
 <body>
   <h4>Select CV to view</h4>
-  <button value="1">CV 1</button>
-  <button value="2">CV 2</button>
-  <button value="3">CV 3</button>
-  <div id="not_url_display" class="warning">Extension not loaded!</div>
 
+  <div class="btn-container">
+    <button value="1">CV 1</button>
+    <button value="2">CV 2</button>
+    <button value="3">CV 3</button>
+  </div>
+
+  <div id="not_url_display">Extension loaded. Click any button to proceed.</div>
 
   <script src="tab_func.js"></script>
 </body>
-
 </html>
